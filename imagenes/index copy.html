@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes/GAEC_logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+     <!-- //----archivos bootstrap 5 -->
+     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+
+     <!-- //----archivos bootstrap personalizados -->
+    <link type="text/css" rel="stylesheet" href="css/estilo.css">
+   
+    
+    <!-- <style type="text/css"> 
+      .transformacion1 { text-transform: capitalize;}   
+      .transformacion2 { text-transform: uppercase;}   
+      .transformacion3 { text-transform: lowercase;}   
+      </style>  -->
+
+
+    <title>Aplicacion</title>
+</head>
+<body>
+
+<!--- -------TRANSFORMAR EN mayusculas--------- -->
+  <script>
+    function mayusculas(e) {
+    e.value = e.value.toUpperCase();
+}
+    </script>
+<!-- ------------------------------------------>
+  
+<div class="d-flex bg-secondary">
+    <div class="align-self-center"> 
+      <span class="align-text-bottom"><img src="imagenes/GAEC_logo.png"   alt="logo" width="28" height="28" >
+        GAEC Servicios Agricolas
+      </span>
+    </div>
+  </div>
+
+  <div class="fondo"></div>
+  <br>
+  
+ <div class="container container-fluid box border">
+   <form class="">
+     <div class="row">
+        <div class="col-12 bg-primary h5 p-0">
+            <p class=" text-center">ALTA EMPLEADOS</p>
+        </div> 
+     </div>
+
+     <div class="row border bg-light  ">
+       
+        <div class="col-12 col-md-3 ">
+             <label for="FormControlInput1" class="form-label">Nombres*</label>
+             <input type="texto" class="form-control" onkeyup="mayusculas(this);" id="nombres" uppercase required="" placeholder="Nombre">
+        </div>
+         
+        <div class="col-12 col-md-3">
+                <label for="Apaterno" class="form-label">Apellido paterno</label>
+                <input type="text" class="form-control" onkeyup="mayusculas(this);" id="Apaterno" placeholder="A.paterno">
+         </div>
+         
+         <div class="col-12 col-md-3">
+                <label for="Amaterno" class="form-label">Apellido Materno</label>
+                <input type="text" class="form-control " onkeyup="mayusculas(this);" id="Amaterno" placeholder="A.Materno">
+        </div>
+
+         <div class="col-12 col-md-3 ">
+            <div class="form-group m-1">
+            <label for="CentroCost">Centro de costos*</label>
+            <select class="form-select" id="CentroCost" required="">
+                <option selected>Seleccione centro de costos</option>
+                <option value="1">AG3C2324 : 3C CHIVATEROS</option>
+                <option value="2">AG3P2324 : 3C PALO SOLO</option>
+                <option value="3">AGBR2223 / BARRANCA</option>
+              </select>
+            </div>
+         </div>
+
+
+         <div class="col-12 col-md-3">
+                <label for="fechaN" class="form-label">FECHA NACIMIENTO*</label>
+                <input type="date" class="form-control" id="fechaN" required="" min="1965-04-01" max="2004-07-01" placeholder="Fecha.Navimiento">
+                
+        </div>
+
+        <div class="col-12 col-md-3">
+                <label for="Amaterno" class="form-label">CURP</label>
+                <input type="text" class="form-control" onkeyup="mayusculas(this);" id="Amaterno" placeholder="CURP">
+         </div>
+
+        <div class="col-12 col-md-3">
+                <label for="Ntelefono" class="form-label">TELEFONO*</label>
+                <input type="tel" class="form-control" id="Ntelefono" onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="0" maxlength="10" required="" placeholder="TELEFONO" title="ingresa puros numeros">
+         </div>
+
+         <div class="col-12 col-md-3">
+                <label for="Email1" class="form-label">Correo Electronico*</label>
+                <input type="email" class="form-control" id="Email1" required="" placeholder="email">
+         </div>
+
+
+         <div class="col-12 col-md-3">
+            <div class="form-group">
+            <label for="CentroCost">Tipo Contratacion*</label>
+            <select class="form-select" id="CentroCost" required="">
+                <option selected>Seleccione contrato</option>
+                <option value="1">Destajo</option>
+                <option value="2">Dia</option>
+              </select>
+            </div>
+         </div>
+
+         <div class="ccol-12 col-md-3">
+                <label for="Nimss" class="form-label">Numero de IMSS</label>
+                <input type="tel" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="0" maxlength="11" title="ingresa puros numeros" required="" id="Nimss" placeholder="IMSS">
+         </div>
+
+         <div class="col-12 col-md-3">
+                <label for="Rfc" class="form-label">RFC</label>
+                <input type="text" class="form-control" onkeyup="mayusculas(this);" id="Rfc" placeholder="RFC">
+         </div>
+
+         <div class="col-12 col-md-3">
+                <label for="Ntarjeta" class="form-label">Numero de Targeta</label>
+                <input type="tel" class="form-control" id="Ntarjeta" onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="0" maxlength="16" placeholder="#targeta" title="ingresa puros numeros">
+         </div>
+
+
+
+     </div>
+
+     <hr>
+     <div class="row text-center bg-light">
+         <div class="col-12 ">
+             <P class="text-success">Adjuntar los documentos necesarios</P> 
+            </div>
+     </div>
+     <br>
+
+     <div class="row mb-3 bg-light ">
+
+        <div class="col-12 col-md-4  text-center">
+            <button type="button" class="form-control btn-block btn-sample btn-success text-white"><i class="fa-solid fa-circle-user"></i>Foto Empleado*</button>
+            <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+          </div>
+
+         <div class="col-12 col-md-4  text-center">
+            <button type="button" class="form-control btn-block btn-sample btn-success text-white"><i class="fa-solid fa-address-card"></i> INE Frontal*</button>
+            <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+          </div>
+
+     <div class="col-12 col-md-4  text-center">
+        <button type="button" class="form-control btn-block btn-sample btn-success text-white "><i class="fa-solid fa-address-book"></i>INE Reverso*</button>
+        <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+      </div>
+    
+
+    </div>
+
+
+    <div class="row mb-2 bg-light">
+
+        <div class="col-12 col-md-4  text-center">
+            <button type="button" class="form-control btn-block btn-sample btn-success text-white "><i class="fa-solid fa-address-card"></i>Comp Domicilio*</button>
+            <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+          </div>
+   
+        <div class="col-12 col-md-4  text-center">
+            <button type="button" class="form-control btn-block btn-sample btn-success text-white"><i class="fa-solid fa-file-circle-question"></i>Acta Nacimiento*</button>
+            <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+          </div>
+   
+        <div class="col-12 col-md-4  text-center">
+           <button type="button" class="form-control btn-block btn-sample btn-success text-white"><i class="fa-solid fa-file-lines"></i>CURP*</button>
+           <p class="mt-2"><input type="image" id="Rfc" placeholder="RFC" src="imagenes/Upload.png" width="75" height="75" class="img-fluid  rounded "></p>     
+         </div>
+        
+       </div>
+       <br>
+       <hr>
+
+       <div class="form-group">
+           <div class="col-12 d-grid gap-2 mb-4">
+            <button class="btn btn-secondary btn-block" type="submit">Enviar</button>
+           </div>
+           
+           <div class="col-12 d-grid gap-2 mb-4">
+            <button class="btn btn-primary btn-block" type="reset">Limpiar</button>
+           </div>
+
+       </div>
+       <hr>
+       <br>
+
+
+
+
+      </form>
+ </div>
+
+</body>
+
+</html>
